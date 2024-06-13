@@ -4,6 +4,7 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "@/assets/styles/globals.css";
+import AuthProvider from "@/components/AuthProvider";
 
 export const meta = {
   title: "Pulse Rental Website",
@@ -12,14 +13,15 @@ export const meta = {
 };
 const MainLayout = ({ children }) => {
   return (
-    <html lang="en">
-      <body>
-        <Navbar/>
-        <div>{children}</div>
-        <Footer/>
-
-      </body>
-    </html>
+    <AuthProvider >
+      <html lang="en">
+        <body>
+          <Navbar />
+          <div>{children}</div>
+          <Footer />
+        </body>
+      </html>
+    </AuthProvider>
   );
 };
 

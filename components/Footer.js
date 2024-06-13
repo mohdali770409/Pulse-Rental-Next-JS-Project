@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import logo from '@/assets/images/logo.png'
+import Link from 'next/link'
 const Footer = () => {
   return (
     <footer className="bg-gray-200 py-4 mt-auto">
@@ -14,8 +15,8 @@ const Footer = () => {
           className="flex flex-wrap justify-center md:justify-start mb-4 md:mb-0"
         >
           <ul className="flex space-x-4">
-            <li><a href="/properties">Properties</a></li>
-            <li><a href="/terms">Terms of Service</a></li>
+            <li><Link href="/properties">Properties</Link></li>
+            <li><Link href="/terms">Terms of Service</Link></li>
           </ul>
         </div>
         <div>
