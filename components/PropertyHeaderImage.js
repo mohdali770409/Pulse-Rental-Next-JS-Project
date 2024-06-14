@@ -6,7 +6,7 @@ const PropertyHeaderImage = ({ image }) => {
       <div className="container-xl m-auto">
         <div className="grid grid-cols-1">
           <img
-            src={`/images/properties/${image}`}
+            src={image}
             alt=""
             className="h-[400px] w-full object-cover"
             width={0}
@@ -15,7 +15,7 @@ const PropertyHeaderImage = ({ image }) => {
           />
         </div>
       </div>
-    </section> 
+    </section>
   );
 };
 

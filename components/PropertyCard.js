@@ -24,7 +24,7 @@ const PropertyCard = ({ property }) => {
   return (
     <div className="relative rounded-xl shadow-md ">
       <Image
-        src={`/images/properties/${property.images[0]}`}
+        src={property.images[0]}
         alt=""
         width={0}
         height={0}
@@ -79,7 +79,7 @@ const PropertyCard = ({ property }) => {
 
         <div className="flex flex-col lg:flex-row justify-between mb-4">
           <div className="flex align-middle gap-2 mb-4 lg:mb-0">
-          <FaMapMarker className="inline mr-2 text-lg text-orange-700 mt-1" />
+            <FaMapMarker className="inline mr-2 text-lg text-orange-700 mt-1" />
             <span className="text-orange-700">
               {" "}
               {property.location.city}, {property.location.state}{" "}
