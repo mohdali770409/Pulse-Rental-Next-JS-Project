@@ -13,12 +13,13 @@ import {
 const PropertyCard = ({ property }) => {
   const { rates } = property;
   const getRateDisplay = () => {
+    console.log(rates);
     if (rates.monthly) {
       return `${rates.monthly.toLocaleString()}/ month`;
     } else if (rates.weekly) {
       return `${rates.weekly.toLocaleString()} / week`;
-    } else if (rates.nighly) {
-      return `${rates.nighly.toLocaleString()}/ night`;
+    } else if (rates.nightly) {
+      return `${rates.nightly.toLocaleString()}/ night`;
     }
   };
   return (

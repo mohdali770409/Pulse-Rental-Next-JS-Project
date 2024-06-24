@@ -1,4 +1,4 @@
-import {  Schema, model, models } from "mongoose";
+import { Schema, model, models } from "mongoose";
 
 const userSchema = new Schema(
   {
@@ -14,10 +14,12 @@ const userSchema = new Schema(
     image: {
       type: String,
     },
-    bookmarks: {
-      type: Schema.Types.ObjectId,
-      ref: "Property",
-    },
+    bookmarks: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Property",
+      },
+    ],
   },
   {
     timestamps: true,

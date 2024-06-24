@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "@/assets/styles/globals.css";
 import AuthProvider from "@/components/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const meta = {
   title: "Pulse Rental Website",
@@ -13,12 +15,13 @@ export const meta = {
 };
 const MainLayout = ({ children }) => {
   return (
-    <AuthProvider >
+    <AuthProvider>
       <html lang="en">
         <body>
           <Navbar />
           <div>{children}</div>
           <Footer />
+          <ToastContainer />
         </body>
       </html>
     </AuthProvider>

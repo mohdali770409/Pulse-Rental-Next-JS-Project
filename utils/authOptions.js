@@ -30,6 +30,7 @@ export const authOptions = {
           email: profile.email,
           username,
           image: profile.picture,
+          
         });
       }
       //   4. return true to allow sign in

@@ -3,6 +3,7 @@ import Property from "@/models/Property";
 import { getSessionUser } from "@/utils/getSessionUser";
 import cloudinary from "@/config/cloudinary";
 
+// GET /api/properties/
 export const GET = async (request) => {
   try {
     await connectDB();
@@ -51,9 +52,9 @@ export const POST = async (request) => {
       square_feet: formData.get("square_feet"),
       amenities,
       rates: {
-        weekly: formData.get("weekly"),
-        monthly: formData.get("monthly"),
-        nightly: formData.get("nightly"),
+        weekly: formData.get("rates.weekly"),
+        monthly: formData.get("rates.monthly"),
+        nightly: formData.get("rates.nightly"),
       },
       seller_info: {
         name: formData.get("seller_info.name"),
