@@ -7,7 +7,7 @@ import "@/assets/styles/globals.css";
 import AuthProvider from "@/components/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { GlobalProvider } from "@/context/GlobalContext";
 export const meta = {
   title: "Pulse Rental Website",
   description: "find your dream rental property",
@@ -15,16 +15,18 @@ export const meta = {
 };
 const MainLayout = ({ children }) => {
   return (
-    <AuthProvider>
-      <html lang="en">
-        <body>
-          <Navbar />
-          <div>{children}</div>
-          <Footer />
-          <ToastContainer />
-        </body>
-      </html>
-    </AuthProvider>
+    <GlobalProvider>
+      <AuthProvider>
+        <html lang="en">
+          <body>
+            <Navbar />
+            <div>{children}</div>
+            <Footer />
+            <ToastContainer />
+          </body>
+        </html>
+      </AuthProvider>
+    </GlobalProvider>
   );
 };
 
