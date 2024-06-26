@@ -3,8 +3,8 @@ import Link from "next/link";
 import { fetchProperties } from "@/utils/requests";
 
 const HomeProperties = async () => {
-  let recentProperties = await fetchProperties();
-  recentProperties = recentProperties
+  let data = await fetchProperties();
+  const recentProperties = data.properties
     .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
     .slice(0, 3);
   return (
